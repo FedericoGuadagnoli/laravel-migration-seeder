@@ -8,6 +8,7 @@ class WelcomeController extends Controller
 {
     public function index()
     {
-        return view('welcome');
+        $trains = Train::all();
+        return view('welcome', compact('trains'));
     }
 }
